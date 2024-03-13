@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Form</title>
+</head>
+<body>
+    <form action="{{ url_for('show_transport') }}" method="POST">
+        <label for="bus_number">Enter Bus Number:</label>
+        <input type="text" id="bus_number" name="bus_number" required>
+        <button type="submit">Submit</button>
+    </form>    
+</body>
+</html>

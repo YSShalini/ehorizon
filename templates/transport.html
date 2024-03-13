@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .btn-back {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: dodgerblue;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-back:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Bus Details</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Bus Number</th>
+            <th>Bus Stop</th>
+            <th>Bus Fare</th>
+            <th>Driver Name</th>
+            <th>License Plate</th>
+            <th>Phone</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for bus in bus_details %}
+        <tr>
+            <td>{{ bus[0] }}</td>
+            <td>{{ bus[1] }}</td>
+            <td>{{ bus[2] }}</td>
+            <td>{{ bus[3] }}</td>
+            <td>{{ bus[4] }}</td>
+            <td>{{ bus[5] }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="/transport_form" class="btn-back">Go Back</a>
+</div>
+</body>
+</html>
